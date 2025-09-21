@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tribute to Leonardo DiCaprio</title>
+
+  <!-- Встроенные стили: нет внешнего файла, поэтому гарантированно применятся -->
+  <style>
+    :root{
+      --grape-dark:#6F2DA8;
+      --grape-muted:#C9AEDB;
+      --grape-light:#A47BC7;
+      --text-light:#ffffff;
+      --text-dark:#222;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--grape-light);
+      color: var(--text-dark);
+      line-height:1.5;
+    }
+
+    /* Header */
+    .header{
+      background:var(--grape-dark);
+      color:var(--text-light);
+      padding:20px;
+      text-align:center;
+    }
+
+    /* Nav */
+    .nav{
+      background:var(--grape-muted);
+      text-align:center;
+      padding:4px 0;
+    }
+    .nav a{
+      display:inline-block;
+      color:var(--text-light);
+      padding:10px 14px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .nav a:hover{ background:var(--grape-dark); }
+
+    /* Sidebar */
+    .sidebar{
+      float:left;
+      width:20%;
+      background:var(--grape-muted);
+      padding:20px;
+      min-height:400px;
+    }
+    .sidebar h3{ margin-top:0; color:var(--text-dark); }
+    .sidebar ul{ padding-left:18px; color:var(--text-dark); }
+    .sidebar a{ color:var(--text-dark); text-decoration:none; }
+    .sidebar a:hover{ text-decoration:underline; }
+
+    /* Content */
+    .content{
+      float:right;
+      width:75%;
+      background: #fff;
+      padding:20px;
+      min-height:400px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      border-radius:6px;
+      margin: 20px;
+    }
+    .content h2{ color:var(--grape-dark); margin-top:0; }
+    .portrait{
+      max-width:300px;
+      width:100%;
+      height:auto;
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.18);
+      display:block;
+      margin-bottom:14px;
+    }
+
+    /* Form */
+    form{
+      background:var(--grape-light);
+      padding:14px;
+      border-radius:8px;
+      margin-top:10px;
+      max-width:600px;
+    }
+    label{ display:block; margin-top:10px; font-weight:600; }
+    input, select, textarea{
+      width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #bdbdbd;
+    }
+    button{
+      margin-top:10px; background:var(--grape-dark); color:var(--text-light);
+      padding:10px 14px; border:none; border-radius:6px; cursor:pointer;
+    }
+    button:hover{ opacity:0.95; }
+
+    /* Footer */
+    .footer{ clear:both; background:var(--grape-dark); color:var(--text-light); text-align:center; padding:12px; margin-top:10px; }
+
+    /* Responsive */
+    @media (max-width:800px){
+      .sidebar, .content{ float:none; width:100%; }
+      .content{ margin:12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Tribute to Leonardo DiCaprio</h1>
+  </div>
+
+  <div class="nav">
+    <a href="#about">About</a>
+    <a href="#career">Career</a>
+    <a href="#filmography">Filmography</a>
+    <a href="#feedback">Feedback</a>
+  </div>
+
+  <div class="sidebar">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#filmography">Filmography</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <section id="about">
+      <h2>About Leonardo DiCaprio</h2>
+      <!-- Положи своё фото в ту же папку и назови leonardo.jpg -->
+      <img src="leo.jpeg" alt="Leonardo DiCaprio" class="portrait">
+      <p>
+        Leonardo Wilhelm DiCaprio (born November 11, 1974) is an American actor and film producer,
+        known for his versatility in biographical and period films. He has earned numerous awards,
+        including an Academy Award and multiple Golden Globes.
+      </p>
+    </section>
+
+    <section id="career">
+      <h2>Career</h2>
+      <ol>
+        <li>Early TV and commercial roles in the late 1980s and early 1990s.</li>
+        <li>Breakthrough: <em>What's Eating Gilbert Grape</em> (1993).</li>
+        <li>Worldwide fame after <em>Titanic</em> (1997).</li>
+        <li>Later awards and collaborations: <em>The Aviator</em>, <em>The Wolf of Wall Street</em>, <em>The Revenant</em>.</li>
+      </ol>
+    </section>
+
+    <section id="filmography">
+      <h2>Filmography / Key Achievements</h2>
+      <ul>
+        <li>First Oscar nomination: <em>What's Eating Gilbert Grape</em> (1993).</li>
+        <li>Titanic (1997) — global fame.</li>
+        <li>Frequent collaboration with Martin Scorsese.</li>
+        <li>Oscar for Best Actor — <em>The Revenant</em> (2015).</li>
+      </ul>
+    </section>
+
+    <section id="feedback">
+      <h2>Feedback Form</h2>
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email">
+
+        <label for="source">How did you find this page?</label>
+        <select id="source" name="source">
+          <option>Internet</option><option>Friend</option><option>Other</option>
+        </select>
+
+        <label>Do you enjoy Leonardo's films?</label>
+        <label><input type="radio" name="like" value="yes"> Yes</label>
+        <label><input type="radio" name="like" value="no"> No</label>
+
+        <label for="comments">Comments</label>
+        <textarea id="comments" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p style="margin-top:12px"><a href="https://en.wikipedia.org/wiki/Leonardo_DiCaprio" target="_blank">Learn more on Wikipedia</a></p>
+    </section>
+  </div>
+
+  <div class="footer">
+    <p>Created by [Your Name]. All rights reserved.</p>
+  </div>
+
+</body>
+</html>
